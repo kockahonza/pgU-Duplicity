@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Build file for our project -->
+<project basedir="." name="pgU-Duplicity" default="main">
+	<property name="java.main.src.dir" location="src/main/java" />
+	<property name="java.test.src.dir" location="src/test/java" />
+
+	<property name="lib.dir" location="lib" />
+	<property name="junit.jar.path" location="${lib.dir}/junit.jar" />
+
+	<property name="build.dir" location="target" />
+	<property name="main.build.dir" location="${build.dir}/main" />
+	<property name="test.build.dir" location="${build.dir}/test" />
+	<property name="jar.build.dir" location="${build.dir}/jars" />
+
+	<property name="test.results.dir" location="${build.dir}/tests-results" />
+
+	<property name="mainClass" value="pgU-Duplicity" />
+
+	<target name="main"
+		depends="compile"
+		description="Default target - runs compile">
+	</target>
+
+	<target name="run"
+		depends="compile"
+		description="runs mainClass">
+		<java classname="${mainClass}">
+			<classpath>
+				<pathelement location="${main.build.dir}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="compile"
+		description="Compile everything in java.src.dir">
+		<mkdir dir="${main.build.dir}" />
+		<javac
+			destdir="${main.build.dir}"
+			debug="true"
+			includeantruntime="false">
+			<src path="${java.main.src.dir}" />
+			<compilerarg value="-Xlint:all" />
+		</javac>
+	</target>
+
+	<target name="jar"
+			depends="compile"
+			description="Compile and make a jar file">
+		<mkdir dir="${jar.build.dir}" />
+		<jar destfile="${jar.build.dir}/app.jar">
+			<fileset dir="${main.build.dir}" includes="**/*.class" />
+			<manifest>
+				<attribute name="Main-Class" value="${mainClass}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="compile-test"
+		depends="compile"
+		description="Compile everything in test.src.dir">
+		<mkdir dir="${test.build.dir}" />
+		<javac
+			destdir="${test.build.dir}"
+			debug="true"
+			includeantruntime="false">
+			<src path="${java.test.src.dir}" />
+			<classpath>
+				<pathelement location="${main.build.dir}"/>
+				<pathelement location="${junit.jar.path}"/>
+			</classpath>
+			<compilerarg value="-Xlint:all" />
+		</javac>
+	</target>
+
+	<!-- ALMOST DONE - SEMI USABLE - STILL NEEDS TO BE COMPLETED -->
+	<target name="test"
+		depends="compile,compile-test"
+		description="Run JUnit tests.">
+		<mkdir dir="${test.results.dir}"/>
+		<junit printsummary="yes" haltonfailure="no" fork="true" forkmode="once">
+			<classpath>
+				<fileset dir="${lib.dir}" includes="*.jar" />
+				<pathelement path="${main.build.dir}" />
+				<pathelement path="${test.build.dir}" />
+			</classpath>
+			<formatter type="plain"/>
+			<formatter type="xml"/>
+			<batchtest fork="yes" todir="${test.results.dir}">
+				<fileset dir="${test.build.dir}">
+					<include name="**/*Test*.class"/>
+				</fileset>
+			</batchtest>
+		</junit>
+		<junitreport todir="${test.results.dir}">
+			<fileset dir="${test.results.dir}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${test.results.dir}/html"/>
+		</junitreport>
+	</target>
+
+	<target name="clean"
+			description="Remove build.dir">
+		<delete dir="${build.dir}" />
+	</target>
+</project>

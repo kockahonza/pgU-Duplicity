@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Build file for our project -->
-<project basedir="." name="pgU-Duplicity" default="main">
+<project basedir="." name="Duplicity" default="main">
 	<property name="java.main.src.dir" location="src/main/java" />
 	<property name="java.test.src.dir" location="src/test/java" />
 
@@ -14,7 +14,7 @@
 
 	<property name="test.results.dir" location="${build.dir}/tests-results" />
 
-	<property name="mainClass" value="pgU-Duplicity" />
+	<property name="mainClass" value="Duplicity" />
 
 	<target name="main"
 		depends="compile"
@@ -28,6 +28,18 @@
 			<classpath>
 				<pathelement location="${main.build.dir}"/>
 			</classpath>
+			<arg value="sample_input"/>
+		</java>
+	</target>
+
+	<target name="run-original"
+		depends="compile"
+		description="runs mainClass">
+		<java classname="DuplicateFiles">
+			<classpath>
+				<pathelement location="${main.build.dir}"/>
+			</classpath>
+			<arg value="sample_input"/>
 		</java>
 	</target>
 

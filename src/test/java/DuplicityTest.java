@@ -3,7 +3,11 @@ import org.junit.Test;
 
 public class DuplicityTest {
 	@Test
-	public void DuplicityExists() {
-		Duplicity SMC = new Duplicity();
+	public void NoInput() {
+		Duplicity.main(new String[]{""});
+	}
+	@Test
+	public void SimpleInput() {
+		Duplicity.main(new String[]{"sample_inputtt"});
 	}
 }

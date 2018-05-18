@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="honza-xps" id="0" name="DuplicityTest" package="" skipped="0" tests="2" time="0.037" timestamp="2018-05-18T10:55:04">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="lib.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/lib" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="junit.jar.path" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/lib/junit.jar" />
+
+          <property name="os.name" value="Linux" />
+
+          <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk/jre/classes" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="/usr/share/apache-ant" />
+
+          <property name="java.runtime.version" value="1.8.0_172-b11" />
+
+          <property name="test.build.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/test" />
+
+          <property name="user.name" value="honza" />
+
+          <property name="build.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk/jre/lib/amd64" />
+
+          <property name="ant.project.default-target" value="main" />
+
+          <property name="ant.project.name" value="Duplicity" />
+
+          <property name="java.version" value="1.8.0_172" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="java.main.src.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/src/main/java" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk/jre/lib/endorsed" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="/usr/lib/jvm/java-8-openjdk/jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/build.xml" />
+
+          <property name="os.version" value="4.16.8-1-ARCH" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="test.results.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/tests-results" />
+
+          <property name="java.vm.version" value="25.172-b11" />
+
+          <property name="ant.library.dir" value="/usr/share/apache-ant/lib" />
+
+          <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+
+          <property name="jar.build.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/jars" />
+
+          <property name="user.home" value="/home/honza" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner DuplicityTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/tests-results/TEST-DuplicityTest.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/tests-results/TEST-DuplicityTest.xml crashfile=/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/junitvmwatcher5591082351103086031.properties propsfile=/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/junit5566006537758388496.properties" />
+
+          <property name="java.class.path" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/lib/junit.jar:/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/main:/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/test:/usr/share/java/junit-4.12.jar:/usr/share/java/apache-ant/ant-launcher.jar:/usr/share/apache-ant/lib/ant.jar:/usr/share/apache-ant/lib/ant-junit.jar:/usr/share/apache-ant/lib/ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 24 2016" />
+
+          <property name="ant.file.Duplicity" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/build.xml" />
+
+          <property name="java.test.src.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/src/test/java" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="mainClass" value="Duplicity" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.io.tmpdir" value="/tmp" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk/jre/lib/ext:/usr/java/packages/lib/ext" />
+
+          <property name="user.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity" />
+
+          <property name="line.separator" value="&#xa;" />
+
+          <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+
+          <property name="ant.file.type.Duplicity" value="file" />
+
+          <property name="basedir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="/usr/share/apache-ant/lib/ant.jar" />
+
+          <property name="main.build.dir" value="/home/honza/Projects/HotLes/DruhaPololetniPrace/pgU-Duplicity/target/main" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="ant.project.invoked-targets" value="test" />
+
+      </properties>
+
+      <testcase classname="DuplicityTest" name="NoInput" time="0.005" />
+
+      <testcase classname="DuplicityTest" name="SimpleInput" time="0.001" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+</testsuites>

@@ -122,7 +122,7 @@ public class Duplicity {
 		}
 	}
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// Mapovani mezi hashem (MD5) a soubory se stejnym hashem.
 		Map<String, List<File>> hashes = new HashMap<String, List<File>>();
 		ArrayList<Hasher> hashers = new ArrayList<Hasher>();
@@ -132,8 +132,11 @@ public class Duplicity {
 			hashers.add(new Hasher(new File(filename), hashes));
 			hashers.get(hashers.size() - 1).start();
 		}
-		for (Hasher h : hashers) {
-			h.join();
+		try {
+			for (Hasher h : hashers) {
+				h.join();
+			}
+		} catch (InterruptedException e) {
 		}
 		ArrayList<EntryAnalyzer> entryanalyzers = new ArrayList<EntryAnalyzer>();
 		for (Map.Entry<String, List<File>> entry : hashes.entrySet()) {
